@@ -11,15 +11,15 @@ namespace AnotherExercise {
         public string Name;
         public double Salary;
         public double Tax;
+        public double finalSalary;
 
-        public double Readjustment(double value) {
-            Salary = Salary * (1 + value) - Tax;
-            return Salary;
+        public void Readjustment(double value) {
+            Salary = Salary * (1 + value);
         }
 
         override public string ToString() {
             return "Employee: " + Name
-                    + " Salary: " + (Salary - Tax).ToString("F2", CultureInfo.InvariantCulture);
+                    + ", $ Salary: " + (Salary - Tax).ToString("F2", CultureInfo.InvariantCulture);
         }
 
     }
