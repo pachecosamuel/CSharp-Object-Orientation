@@ -1,6 +1,8 @@
 ﻿using System.Globalization;
-internal class Program {
-    private static void Main(string[] args) {
+internal class Program
+{
+    private static void Main(string[] args)
+    {
 
         TimeSpan t1 = TimeSpan.MaxValue;
         TimeSpan t2 = TimeSpan.MinValue;
