@@ -28,7 +28,7 @@ namespace Class135_Inherit_polymorphism.Entities
             Balance -= amount + 5.0;
         }
 
-        public void Deposit(double amount)
+        public virtual void Deposit(double amount)
         {
             Balance += amount;
         }

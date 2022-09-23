@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Class135_Inherit_polymorphism.Entities
 {
-    internal class SavingAccount : Account
+    sealed class SavingAccount : Account
     {
         public double InterestRate { get; set; }
         

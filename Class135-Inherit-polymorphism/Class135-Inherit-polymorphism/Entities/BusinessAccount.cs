@@ -14,7 +14,8 @@ namespace Class135_Inherit_polymorphism.Entities
         {
         }
 
-        public BusinessAccount(int number, string holder, double balance, double loanLimit) : base(number, holder, balance)
+        public BusinessAccount(int number, string holder, double balance, double loanLimit)
+                : base(number, holder, balance)
         {
             LoanLimit = loanLimit;
         }
@@ -27,10 +28,11 @@ namespace Class135_Inherit_polymorphism.Entities
             }
         }
 
-        public override void Withdraw(double amount)
+        public sealed override void Withdraw(double amount)
         {
             base.Withdraw(amount);
             Balance -= 2.0;
         }
+
     }
 }
