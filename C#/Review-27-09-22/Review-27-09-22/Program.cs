@@ -1,35 +1,34 @@
-﻿using Review_27_09_22.Entities;
-using Review_27_09_22.Entities.Exception;
-
-internal class Program
+﻿internal class Program
 {
     private static void Main(string[] args)
     {
-        while (true)
+        string Path = @"C:\Users\Samuel Pacheco\Desktop\JobT2M";
+        string targetPath = @"C:\Users\Samuel Pacheco\Desktop\JobT2M\output";
+
+        try
         {
-            try
-            {
-                Console.Write("Room number: ");
-                int roomNumber = int.Parse(Console.ReadLine());
+            var folders = Directory.EnumerateDirectories(Path, "*.*", SearchOption.AllDirectories);
 
-                Console.Write("Check-in date (dd/MM/yyyy): ");
-                DateTime checkIn = DateTime.Parse(Console.ReadLine());
-
-                Console.Write("Check-Out date (dd/MM/yyyy): ");
-                DateTime checkOut = DateTime.Parse(Console.ReadLine());
-
-                Reservation reservation = new(roomNumber, checkIn, checkOut);
-                Console.WriteLine(reservation);
-                Console.WriteLine();
-            }
-            catch (DomainException e)
+            foreach (var folder in folders)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(folder);
             }
-            catch (Exception e)
+
+            Console.WriteLine(); Console.WriteLine();
+
+            var files = Directory.EnumerateFiles(Path, "*.*", SearchOption.AllDirectories);
+
+            foreach (var file in files)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(file);
             }
+            
+            Directory.CreateDirectory(targetPath);
         }
+        catch (IOException e)
+        {
+            Console.WriteLine(e.Message);
+        }
+
     }
 }
