@@ -1,4 +1,7 @@
 # C#
+### my certificate: https://www.udemy.com/certificate/UC-bb519bf6-eac2-46a5-96fa-171e94ba1c3a/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=email
+### my certificate: 
+
 https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/
 In this course you will learn all about Object Oriented Programming using C#. We'll start from the very basics, with very simple and didactic examples, and from there we will gradually advance, until we delve into in-depth topics such as interfaces, polymorphism, SOLID principles, design patterns, generics, lambda expressions, delegates, LINQ and much more.
 
